@@ -1,5 +1,7 @@
-require "meetups_nearby/version"
+require 'nokogiri'
+require 'open-uri'
 
-module MeetupsNearby
-  # Your code goes here...
-end
+require_relative './meetups_nearby/version'
+require_relative './meetups_nearby/cli'
+require_relative './meetups_nearby/meetup'
+require_relative './meetups_nearby/scraper'

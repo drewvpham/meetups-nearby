@@ -1,7 +1,7 @@
 class MeetupsNearby::Scraper
 
   def self.today
-    html = open("https://www.meetup.com/find/events/?allMeetups=true&radius=#{MeetupsNearby::CLI.input.radius.to_i}&userFreeform=#{MeetupsAround::CLI.input.zip_code.to_i}")
+    html = open("https://www.meetup.com/find/events/?allMeetups=true&radius=#{MeetupsNearby::CLI.input.radius.to_i}&userFreeform=#{MeetupsNearby::CLI.input.zip_code.to_i}")
     doc = Nokogiri::HTML(html)
     meetups = []
     today = Time.new

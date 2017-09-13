@@ -17,7 +17,7 @@ class MeetupsNearby::CLI
   def input_zipcode
     puts 'What zip code would you like to see meetups for?'
     @zip_code = gets.strip
-    if /\b\d{5}\b/.match?(zip_code)
+    if /\b\d{5}\b/.match(@zip_code)
       nil
     else
       puts 'Please enter a five digit zip code.'
@@ -28,7 +28,7 @@ class MeetupsNearby::CLI
   def input_radius
     puts 'What radius around that zip code would you like to see meetups for?'
     @radius = gets.strip
-    if /\b\d{1,2}\b/.match?(radius)
+    if /\b\d{1,2}\b/.match(@radius)
       nil
     else
       puts 'Please enter a radius less than 100.'
@@ -49,6 +49,6 @@ class MeetupsNearby::CLI
   def again?
     puts 'Would you like to search again? [Y/N]'
     input = gets.strip.downcase
-    puts input == 'y' || input == 'yes' ? call : 'Goodbye =)'
+    puts input == 'y' || input == 'yes' ? call : 'Thank you for using MeetupsNearby!'
   end
 end

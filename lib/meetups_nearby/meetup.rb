@@ -1,4 +1,4 @@
-class MeetupsAround::Meetup
+class MeetupsNearby::Meetup
   attr_accessor :time, :group, :event, :attending, :meetups
 
   @@meetups = []

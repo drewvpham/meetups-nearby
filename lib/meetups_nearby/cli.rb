@@ -1,4 +1,4 @@
-Nearbyclass MeetupsNearby::CLI
+class MeetupsNearby::CLI
   attr_accessor :meetups
   attr_reader :zip_code, :radius
   def call

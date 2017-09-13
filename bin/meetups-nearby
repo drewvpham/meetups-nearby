@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require './lib/meetups_nearby'
+
+MeetupsNearby::CLI.new.call
